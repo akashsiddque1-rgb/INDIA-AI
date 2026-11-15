@@ -1,0 +1,1489 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#081528">
+  <title>INDIA AI — by Akash | Intelligent Creative Workspace</title>
+
+  <!-- Tailwind CSS & Lucide Icons -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Markdown parser & Prism for Code Highlighting -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brandDark: '#081528',
+            brandSurface: '#0f223d',
+            brandCard: '#152b4a',
+            brandBorder: '#233d63',
+            tirangaSaffron: '#FF9933',
+            tirangaWhite: '#FFFFFF',
+            tirangaGreen: '#138808',
+            tirangaNavy: '#000080'
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: #081528; }
+    ::-webkit-scrollbar-thumb { background: #233d63; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #FF9933; }
+
+    /* Prose and Markdown styling inside chat */
+    .prose p { margin-bottom: 0.75rem; line-height: 1.6; }
+    .prose pre { background: #081528 !important; border: 1px solid #233d63; border-radius: 0.5rem; padding: 0.75rem; overflow-x: auto; margin-bottom: 0.75rem; }
+    .prose code { color: #f59e0b; font-family: monospace; font-size: 0.9em; }
+    .prose ul, .prose ol { margin-left: 1.25rem; margin-bottom: 0.75rem; }
+    .prose ul { list-style-type: disc; }
+    .prose ol { list-style-type: decimal; }
+    .prose h1, .prose h2, .prose h3 { font-weight: 700; color: #fff; margin-top: 1rem; margin-bottom: 0.5rem; }
+
+    /* Animated gradient accent */
+    .tricolor-glow {
+      background: linear-gradient(90deg, #FF9933 0%, #FFFFFF 50%, #138808 100%);
+      height: 3px;
+    }
+  </style>
+</head>
+
+<body class="bg-[#081528] text-slate-100 min-h-screen flex flex-col font-sans selection:bg-[#FF9933] selection:text-black">
+
+  <!-- Tricolor Top Bar Accent -->
+  <div class="tricolor-glow w-full"></div>
+
+  <!-- Header -->
+  <header class="bg-[#0f223d]/90 backdrop-blur-md sticky top-0 z-40 border-b border-[#233d63]/80 px-4 py-3 sm:px-6">
+    <div class="max-w-6xl mx-auto flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-[#FF9933] via-white to-[#138808] p-[2px] shadow-lg shadow-orange-500/10">
+          <div class="w-full h-full bg-[#081528] rounded-[10px] flex items-center justify-center font-black text-xs text-[#FF9933]">
+            IN
+          </div>
+        </div>
+        <div>
+          <h1 class="text-xl sm:text-2xl font-black tracking-tight text-white flex items-center gap-2">
+            INDIA AI
+            <span class="text-xs px-2 py-0.5 rounded-full font-bold uppercase bg-amber-500/20 text-[#FF9933] border border-amber-500/30">
+              by Akash
+            </span>
+          </h1>
+          <p class="text-[11px] text-slate-400 font-medium">Empowering India's Digital Bharat & Creative Horizon</p>
+        </div>
+      </div>
+
+      <!-- Quick status indicator & Settings -->
+      <div class="flex items-center gap-2">
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-950/70 border border-emerald-500/30 text-emerald-300">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Gemini Online
+        </span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="flex-1 max-w-6xl w-full mx-auto p-4 sm:p-6 space-y-6">
+
+    <!-- Hero / Welcome Banner -->
+    <div class="relative overflow-hidden rounded-2xl bg-gradient-to-r from-[#10223d] via-[#142a4a] to-[#0c1c33] border border-[#233d63] p-5 sm:p-7 shadow-xl">
+      <div class="absolute -right-10 -bottom-10 w-44 h-44 bg-orange-500/10 rounded-full blur-3xl pointer-events-none"></div>
+      <div class="absolute -left-10 -top-10 w-44 h-44 bg-green-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+      <div class="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-4">
+        <div>
+          <span class="text-xs font-bold tracking-widest text-[#FF9933] uppercase flex items-center gap-1.5">
+            <i class="fa-solid fa-sparkles"></i> All-in-One Multi-Modal Workspace
+          </span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-white mt-1">What will you build or discover today?</h2>
+          <p class="text-slate-300 text-sm mt-1 max-w-2xl">
+            Conversational reasoning, Indic language translations, visual generators, film scene scripting, and voice synthesizers in Hindi, Bengali, English & regional dialects.
+          </p>
+        </div>
+        <div class="flex items-center gap-2">
+          <button onclick="switchTab('chat')" class="px-4 py-2 text-xs font-bold bg-[#FF9933] hover:bg-orange-500 text-slate-950 rounded-xl transition-all shadow-lg shadow-orange-500/20 active:scale-95 flex items-center gap-1.5">
+            <i class="fa-solid fa-message"></i> Start Chat
+          </button>
+          <button onclick="switchTab('images')" class="px-4 py-2 text-xs font-bold bg-[#138808] hover:bg-green-600 text-white rounded-xl transition-all shadow-lg shadow-green-600/20 active:scale-95 flex items-center gap-1.5">
+            <i class="fa-solid fa-wand-magic-sparkles"></i> AI Images
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation Hub / Workspace Tiles -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
+      <button onclick="switchTab('chat')" id="nav-chat" class="tab-btn flex flex-col items-start p-3.5 rounded-xl border border-[#233d63] bg-[#0f223d] hover:bg-[#152b4a] transition-all text-left group active:scale-95">
+        <span class="w-8 h-8 rounded-lg bg-orange-500/15 text-[#FF9933] flex items-center justify-center text-sm mb-2 group-hover:scale-110 transition-transform">
+          <i class="fa-solid fa-comments"></i>
+        </span>
+        <b class="text-sm text-white group-hover:text-[#FF9933] transition-colors">AI Chat</b>
+        <small class="text-[11px] text-slate-400">Ask & solve anything</small>
+      </button>
+
+      <button onclick="switchTab('translate')" id="nav-translate" class="tab-btn flex flex-col items-start p-3.5 rounded-xl border border-[#233d63] bg-[#0f223d] hover:bg-[#152b4a] transition-all text-left group active:scale-95">
+        <span class="w-8 h-8 rounded-lg bg-blue-500/15 text-blue-400 flex items-center justify-center text-sm mb-2 group-hover:scale-110 transition-transform">
+          <i class="fa-solid fa-language"></i>
+        </span>
+        <b class="text-sm text-white group-hover:text-blue-400 transition-colors">Translate</b>
+        <small class="text-[11px] text-slate-400">12+ Indic languages</small>
+      </button>
+
+      <button onclick="switchTab('images')" id="nav-images" class="tab-btn flex flex-col items-start p-3.5 rounded-xl border border-[#233d63] bg-[#0f223d] hover:bg-[#152b4a] transition-all text-left group active:scale-95">
+        <span class="w-8 h-8 rounded-lg bg-emerald-500/15 text-emerald-400 flex items-center justify-center text-sm mb-2 group-hover:scale-110 transition-transform">
+          <i class="fa-solid fa-palette"></i>
+        </span>
+        <b class="text-sm text-white group-hover:text-emerald-400 transition-colors">Image Studio</b>
+        <small class="text-[11px] text-slate-400">Generate real art</small>
+      </button>
+
+      <button onclick="switchTab('video')" id="nav-video" class="tab-btn flex flex-col items-start p-3.5 rounded-xl border border-[#233d63] bg-[#0f223d] hover:bg-[#152b4a] transition-all text-left group active:scale-95">
+        <span class="w-8 h-8 rounded-lg bg-purple-500/15 text-purple-400 flex items-center justify-center text-sm mb-2 group-hover:scale-110 transition-transform">
+          <i class="fa-solid fa-film"></i>
+        </span>
+        <b class="text-sm text-white group-hover:text-purple-400 transition-colors">Video Scripts</b>
+        <small class="text-[11px] text-slate-400">Storyboard prompts</small>
+      </button>
+
+      <button onclick="switchTab('voice')" id="nav-voice" class="tab-btn flex flex-col items-start p-3.5 rounded-xl border border-[#233d63] bg-[#0f223d] hover:bg-[#152b4a] transition-all text-left group active:scale-95">
+        <span class="w-8 h-8 rounded-lg bg-amber-500/15 text-amber-400 flex items-center justify-center text-sm mb-2 group-hover:scale-110 transition-transform">
+          <i class="fa-solid fa-microphone"></i>
+        </span>
+        <b class="text-sm text-white group-hover:text-amber-400 transition-colors">Voice Studio</b>
+        <small class="text-[11px] text-slate-400">Listen & Dictate</small>
+      </button>
+
+      <button onclick="switchTab('history')" id="nav-history" class="tab-btn flex flex-col items-start p-3.5 rounded-xl border border-[#233d63] bg-[#0f223d] hover:bg-[#152b4a] transition-all text-left group active:scale-95">
+        <span class="w-8 h-8 rounded-lg bg-rose-500/15 text-rose-400 flex items-center justify-center text-sm mb-2 group-hover:scale-110 transition-transform">
+          <i class="fa-solid fa-box-archive"></i>
+        </span>
+        <b class="text-sm text-white group-hover:text-rose-400 transition-colors">Workspace</b>
+        <small class="text-[11px] text-slate-400">Saved creations</small>
+      </button>
+    </div>
+
+    <!-- Notification / Toast Container -->
+    <div id="toast" class="hidden fixed bottom-6 right-6 z-50 px-4 py-3 rounded-xl bg-slate-900/95 border border-slate-700 text-white shadow-2xl flex items-center gap-3 transition-all duration-300">
+      <span id="toastIcon" class="text-[#FF9933]"><i class="fa-solid fa-circle-check"></i></span>
+      <span id="toastMessage" class="text-xs sm:text-sm font-medium">Notification message</span>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- SECTION 1: AI CHAT (Gemini Powered)        -->
+    <!-- ========================================== -->
+    <section id="tab-chat" class="panel-section bg-[#0f223d] border border-[#233d63] rounded-2xl p-4 sm:p-6 shadow-xl flex flex-col h-[700px]">
+      <div class="flex items-center justify-between pb-4 border-b border-[#233d63]">
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-lg bg-orange-500/20 text-[#FF9933] flex items-center justify-center text-lg">
+            <i class="fa-solid fa-robot"></i>
+          </div>
+          <div>
+            <h2 class="text-lg font-bold text-white">INDIA AI Chat Assistant</h2>
+            <p class="text-xs text-slate-400">Multi-turn, coding, business, general knowledge & multilingual Indic responses</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-2">
+          <button onclick="clearChatConfirm()" title="Clear conversation" class="p-2 text-slate-400 hover:text-red-400 hover:bg-red-500/10 rounded-lg text-xs transition">
+            <i class="fa-regular fa-trash-can"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Quick Prompt Suggestions -->
+      <div class="flex gap-2 overflow-x-auto py-3 no-scrollbar border-b border-[#233d63]/50">
+        <button onclick="applyPrompt('Explain Quantum Computing in simple Hindi')" class="whitespace-nowrap px-3 py-1.5 rounded-full bg-[#152b4a] hover:bg-[#1f3d67] border border-[#233d63] text-xs text-slate-300 transition">
+          🇮🇳 Explain in Hindi
+        </button>
+        <button onclick="applyPrompt('Give me 3 profitable startup ideas for tier-2 Indian cities with tech execution')" class="whitespace-nowrap px-3 py-1.5 rounded-full bg-[#152b4a] hover:bg-[#1f3d67] border border-[#233d63] text-xs text-slate-300 transition">
+          🚀 India Startup Ideas
+        </button>
+        <button onclick="applyPrompt('Write a clean JavaScript function with comments to validate Indian PAN and GST numbers')" class="whitespace-nowrap px-3 py-1.5 rounded-full bg-[#152b4a] hover:bg-[#1f3d67] border border-[#233d63] text-xs text-slate-300 transition">
+          💻 Code Helper
+        </button>
+        <button onclick="applyPrompt('Draft a professional email requesting leave during Diwali festival')" class="whitespace-nowrap px-3 py-1.5 rounded-full bg-[#152b4a] hover:bg-[#1f3d67] border border-[#233d63] text-xs text-slate-300 transition">
+          ✉️ Festive Leave Email
+        </button>
+      </div>
+
+      <!-- Messages Thread -->
+      <div id="chatThread" class="flex-1 overflow-y-auto py-4 space-y-4 pr-1">
+        <!-- Initial Greetings -->
+        <div class="flex items-start gap-3">
+          <div class="w-8 h-8 rounded-lg bg-orange-500/20 text-[#FF9933] flex items-center justify-center font-bold text-xs shrink-0">
+            AI
+          </div>
+          <div class="bg-[#152b4a] border border-[#233d63] rounded-2xl rounded-tl-none p-4 max-w-[85%] text-sm">
+            <p class="font-semibold text-white mb-1">Namaste! I am INDIA AI 🙏</p>
+            <p class="text-slate-300">
+              I can assist you with logic, code, creative writing, research, and Indic languages (Hindi, Bengali, Marathi, Tamil, etc.). Ask me anything below!
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Chat Input Area -->
+      <div class="pt-3 border-t border-[#233d63]">
+        <div class="relative bg-[#081528] rounded-xl border border-[#233d63] focus-within:border-[#FF9933] transition flex items-end p-2 gap-2">
+          <textarea id="chatInput" rows="1" placeholder="Ask INDIA AI anything in English, हिंदी, বাংলা, தமிழ்..." class="w-full bg-transparent text-white text-sm focus:outline-none resize-none max-h-32 py-1.5 px-2" onkeydown="handleChatEnter(event)"></textarea>
+          
+          <!-- Voice Dictation for Chat -->
+          <button id="chatMicBtn" onclick="toggleSpeechToText('chatInput', 'chatMicBtn')" title="Dictate with voice" class="p-2 text-slate-400 hover:text-amber-400 rounded-lg hover:bg-[#152b4a] transition">
+            <i class="fa-solid fa-microphone"></i>
+          </button>
+
+          <button id="chatSendBtn" onclick="sendChatMessage()" class="px-4 py-2 bg-[#FF9933] hover:bg-orange-500 text-slate-950 font-bold rounded-lg text-xs transition flex items-center gap-1.5 active:scale-95 shadow">
+            <span>Send</span>
+            <i class="fa-solid fa-paper-plane"></i>
+          </button>
+        </div>
+        <p class="text-[11px] text-slate-500 mt-1 text-center">Powered by Gemini AI • Multilingual & Secure</p>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- SECTION 2: TRANSLATION STUDIO              -->
+    <!-- ========================================== -->
+    <section id="tab-translate" class="panel-section hidden bg-[#0f223d] border border-[#233d63] rounded-2xl p-4 sm:p-6 shadow-xl space-y-5">
+      <div class="flex items-center justify-between pb-3 border-b border-[#233d63]">
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-lg bg-blue-500/20 text-blue-400 flex items-center justify-center text-lg">
+            <i class="fa-solid fa-language"></i>
+          </div>
+          <div>
+            <h2 class="text-lg font-bold text-white">Indic Translation Engine</h2>
+            <p class="text-xs text-slate-400">Contextual high-accuracy translations across Indian languages</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Language selector controls -->
+      <div class="grid grid-cols-1 sm:grid-cols-5 gap-3 items-center">
+        <div class="sm:col-span-2">
+          <label class="block text-xs font-semibold text-slate-400 mb-1">Source Language</label>
+          <select id="transSource" class="w-full bg-[#081528] border border-[#233d63] rounded-xl px-3 py-2 text-sm text-white focus:outline-none focus:border-blue-400">
+            <option value="Auto-Detect">Auto-Detect</option>
+            <option value="English" selected>English</option>
+            <option value="Hindi">Hindi (हिंदी)</option>
+            <option value="Bengali">Bengali (বাংলা)</option>
+            <option value="Tamil">Tamil (தமிழ்)</option>
+            <option value="Telugu">Telugu (తెలుగు)</option>
+            <option value="Marathi">Marathi (मराठी)</option>
+            <option value="Gujarati">Gujarati (ગુજરાતી)</option>
+            <option value="Kannada">Kannada (ಕನ್ನಡ)</option>
+            <option value="Malayalam">Malayalam (മലയാളം)</option>
+            <option value="Punjabi">Punjabi (ਪੰਜਾਬੀ)</option>
+            <option value="Urdu">Urdu (اردو)</option>
+          </select>
+        </div>
+
+        <div class="flex justify-center sm:col-span-1">
+          <button onclick="swapLanguages()" class="p-2.5 rounded-full bg-[#152b4a] hover:bg-[#203c66] border border-[#233d63] text-blue-400 transition active:rotate-180">
+            <i class="fa-solid fa-right-left"></i>
+          </button>
+        </div>
+
+        <div class="sm:col-span-2">
+          <label class="block text-xs font-semibold text-slate-400 mb-1">Target Language</label>
+          <select id="transTarget" class="w-full bg-[#081528] border border-[#233d63] rounded-xl px-3 py-2 text-sm text-white focus:outline-none focus:border-blue-400">
+            <option value="Hindi" selected>Hindi (हिंदी)</option>
+            <option value="English">English</option>
+            <option value="Bengali">Bengali (বাংলা)</option>
+            <option value="Tamil">Tamil (தமிழ்)</option>
+            <option value="Telugu">Telugu (తెలుగు)</option>
+            <option value="Marathi">Marathi (मराठी)</option>
+            <option value="Gujarati">Gujarati (ગુજરાતી)</option>
+            <option value="Kannada">Kannada (ಕನ್ನಡ)</option>
+            <option value="Malayalam">Malayalam (മലയാളം)</option>
+            <option value="Punjabi">Punjabi (ਪੰਜਾਬੀ)</option>
+            <option value="Urdu">Urdu (اردو)</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Text Areas -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <!-- Input Text Box -->
+        <div class="flex flex-col rounded-xl bg-[#081528] border border-[#233d63] p-3 space-y-2">
+          <div class="flex items-center justify-between text-xs text-slate-400 border-b border-[#233d63]/60 pb-2">
+            <span>Input Text</span>
+            <div class="flex items-center gap-2">
+              <button onclick="toggleSpeechToText('transInput', 'transMicBtn')" id="transMicBtn" class="hover:text-amber-400" title="Dictate voice">
+                <i class="fa-solid fa-microphone"></i>
+              </button>
+              <button onclick="document.getElementById('transInput').value=''" class="hover:text-red-400" title="Clear">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+            </div>
+          </div>
+          <textarea id="transInput" rows="6" placeholder="Paste or type text to translate..." class="bg-transparent text-white text-sm focus:outline-none resize-none flex-1 leading-relaxed">India is a land of vibrant traditions, diverse cultures, and technological innovation.</textarea>
+          <div class="flex justify-between items-center pt-2">
+            <span id="transCharCount" class="text-[11px] text-slate-500">0 characters</span>
+            <button onclick="executeTranslation()" id="transSubmitBtn" class="px-4 py-2 bg-blue-600 hover:bg-blue-500 font-bold text-xs text-white rounded-lg transition flex items-center gap-1.5 shadow">
+              <i class="fa-solid fa-bolt"></i> Translate Now
+            </button>
+          </div>
+        </div>
+
+        <!-- Output Text Box -->
+        <div class="flex flex-col rounded-xl bg-[#081528] border border-[#233d63] p-3 space-y-2">
+          <div class="flex items-center justify-between text-xs text-slate-400 border-b border-[#233d63]/60 pb-2">
+            <span>Translated Output</span>
+            <div class="flex items-center gap-2">
+              <button onclick="playTTS(document.getElementById('transOutput').value)" class="hover:text-emerald-400" title="Listen aloud">
+                <i class="fa-solid fa-volume-high"></i>
+              </button>
+              <button onclick="copyToClipboard(document.getElementById('transOutput').value)" class="hover:text-blue-400" title="Copy translation">
+                <i class="fa-regular fa-copy"></i>
+              </button>
+              <button onclick="saveToHistory('Translation', document.getElementById('transOutput').value)" class="hover:text-yellow-400" title="Save to workspace">
+                <i class="fa-regular fa-bookmark"></i>
+              </button>
+            </div>
+          </div>
+          <div id="transOutput" class="bg-transparent text-slate-200 text-sm overflow-y-auto flex-1 min-h-[144px] whitespace-pre-wrap leading-relaxed py-1">
+            Translation will appear here instantly...
+          </div>
+          <div class="text-[11px] text-slate-500 pt-2 flex justify-between items-center">
+            <span>Context preserved</span>
+            <span id="transStatus" class="text-blue-400">Ready</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- SECTION 3: AI IMAGE STUDIO                -->
+    <!-- ========================================== -->
+    <section id="tab-images" class="panel-section hidden bg-[#0f223d] border border-[#233d63] rounded-2xl p-4 sm:p-6 shadow-xl space-y-5">
+      <div class="flex items-center justify-between pb-3 border-b border-[#233d63]">
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-lg">
+            <i class="fa-solid fa-palette"></i>
+          </div>
+          <div>
+            <h2 class="text-lg font-bold text-white">AI Image Studio</h2>
+            <p class="text-xs text-slate-400">Transform your imagination into high-definition digital art</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+        <!-- Controls & Prompts -->
+        <div class="lg:col-span-5 space-y-4">
+          <div>
+            <label class="block text-xs font-semibold text-slate-300 mb-1">Image Prompt Description</label>
+            <textarea id="imagePrompt" rows="4" placeholder="Describe the scene in detail (e.g., A futuristic Varanasi ghat with floating neon boats, drone diyas in night sky, 8k hyperrealistic photorealistic)..." class="w-full bg-[#081528] border border-[#233d63] rounded-xl p-3 text-sm text-white focus:outline-none focus:border-emerald-400 resize-none leading-relaxed">A grand futuristic Indian royal palace with saffron holographic flags, floating solar lanterns, cinematic neon lighting, 8k resolution, octane render</textarea>
+          </div>
+
+          <!-- Style Presets -->
+          <div>
+            <label class="block text-xs font-semibold text-slate-300 mb-2">Artistic Style Preset</label>
+            <div class="grid grid-cols-2 gap-2 text-xs">
+              <button onclick="setImageStyle('Bharat Cyberpunk, neon tricolor accents, unreal engine 5, ultra-detailed')" class="style-pill p-2 rounded-lg bg-[#152b4a] hover:bg-[#1f3d67] border border-[#233d63] text-left text-slate-300">
+                🏮 Bharat Cyberpunk
+              </button>
+              <button onclick="setImageStyle('Bollywood Cinematic 70mm film still, dramatic volumetric lighting, anamorphic lens')" class="style-pill p-2 rounded-lg bg-[#152b4a] hover:bg-[#1f3d67] border border-[#233d63] text-left text-slate-300">
+                🎬 Bollywood Cinematic
+              </button>
+              <button onclick="setImageStyle('Traditional Indian Madhubani and Tanjore fusion modern painting, gold foil embellishments')" class="style-pill p-2 rounded-lg bg-[#152b4a] hover:bg-[#1f3d67] border border-[#233d63] text-left text-slate-300">
+                🎨 Indic Folk Art
+              </button>
+              <button onclick="setImageStyle('National Geographic hyper-detailed documentary photography, 85mm lens, sharp portrait')" class="style-pill p-2 rounded-lg bg-[#152b4a] hover:bg-[#1f3d67] border border-[#233d63] text-left text-slate-300">
+                📷 Ultra Photoreal
+              </button>
+            </div>
+          </div>
+
+          <!-- Aspect Ratio & Generation Button -->
+          <div class="flex items-center gap-3">
+            <div class="flex-1">
+              <label class="block text-xs font-semibold text-slate-300 mb-1">Aspect Ratio</label>
+              <select id="imageAspect" class="w-full bg-[#081528] border border-[#233d63] rounded-xl px-3 py-2 text-xs text-white focus:outline-none">
+                <option value="1:1">Square (1:1)</option>
+                <option value="16:9" selected>Landscape (16:9)</option>
+                <option value="9:16">Portrait (9:16)</option>
+                <option value="4:3">Standard (4:3)</option>
+              </select>
+            </div>
+            <div class="pt-5">
+              <button onclick="enhancePromptWithAI()" id="enhancePromptBtn" class="px-3 py-2 rounded-xl border border-emerald-500/40 text-emerald-300 hover:bg-emerald-500/10 text-xs font-semibold flex items-center gap-1.5 transition">
+                <i class="fa-solid fa-wand-magic"></i> AI Enhance
+              </button>
+            </div>
+          </div>
+
+          <button onclick="generateImage()" id="genImgBtn" class="w-full py-3 bg-[#138808] hover:bg-emerald-600 font-bold text-sm text-white rounded-xl shadow-lg shadow-green-600/20 transition flex items-center justify-center gap-2 active:scale-95">
+            <i class="fa-solid fa-palette"></i> Generate Masterpiece
+          </button>
+        </div>
+
+        <!-- Image Canvas / Output Area -->
+        <div class="lg:col-span-7 flex flex-col items-center justify-center bg-[#081528] border border-[#233d63] rounded-xl p-4 min-h-[380px] relative overflow-hidden">
+          <div id="imageLoader" class="hidden flex flex-col items-center justify-center space-y-3 z-10 py-12">
+            <div class="w-12 h-12 border-4 border-emerald-500/30 border-t-emerald-400 rounded-full animate-spin"></div>
+            <p class="text-xs text-emerald-300 font-medium animate-pulse">Rendering high-resolution pixels with AI...</p>
+          </div>
+
+          <div id="imageDisplayWrapper" class="w-full h-full flex flex-col items-center justify-center">
+            <img id="generatedImg" src="https://images.unsplash.com/photo-1598890777032-bde835ba27c2?auto=format&fit=crop&w=1000&q=80" alt="Generated Artwork" class="rounded-lg max-h-[440px] w-full object-contain border border-[#233d63] shadow-2xl transition duration-500" onerror="this.src='https://placehold.co/800x450/081528/FF9933?text=INDIA+AI+Artwork'">
+            
+            <div class="flex items-center justify-between w-full mt-3 pt-3 border-t border-[#233d63]/80">
+              <span id="imgDetails" class="text-xs text-slate-400 truncate max-w-xs">Futuristic Palace • Landscape</span>
+              <div class="flex items-center gap-2">
+                <button onclick="downloadImage()" class="px-3 py-1.5 bg-[#152b4a] hover:bg-[#203c66] text-xs text-slate-200 rounded-lg border border-[#233d63] flex items-center gap-1 transition">
+                  <i class="fa-solid fa-download"></i> Download
+                </button>
+                <button onclick="saveCurrentArtwork()" class="px-3 py-1.5 bg-[#152b4a] hover:bg-[#203c66] text-xs text-amber-300 rounded-lg border border-[#233d63] flex items-center gap-1 transition">
+                  <i class="fa-regular fa-bookmark"></i> Save
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- SECTION 4: VIDEO SCRIPT & SCENE STUDIO     -->
+    <!-- ========================================== -->
+    <section id="tab-video" class="panel-section hidden bg-[#0f223d] border border-[#233d63] rounded-2xl p-4 sm:p-6 shadow-xl space-y-5">
+      <div class="flex items-center justify-between pb-3 border-b border-[#233d63]">
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-lg bg-purple-500/20 text-purple-400 flex items-center justify-center text-lg">
+            <i class="fa-solid fa-film"></i>
+          </div>
+          <div>
+            <h2 class="text-lg font-bold text-white">Film & Video Storyboard Studio</h2>
+            <p class="text-xs text-slate-400">Generate cinematic scenes, director camera angles, voiceover cues & Sora/Runway prompts</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div>
+          <label class="block text-xs font-semibold text-slate-300 mb-1">Story or Campaign Concept</label>
+          <textarea id="videoTopic" rows="4" placeholder="e.g. A 60-second patriotic commercial celebrating India's Chandrayaan moon mission and space tech future..." class="w-full bg-[#081528] border border-[#233d63] rounded-xl p-3 text-sm text-white focus:outline-none focus:border-purple-400 resize-none">A high-energy 45-second commercial celebrating Indian artisan craftsmanship meeting modern global fashion, shot in Rajasthan</textarea>
+        </div>
+
+        <div>
+          <label class="block text-xs font-semibold text-slate-300 mb-1">Tone & Genre</label>
+          <select id="videoTone" class="w-full bg-[#081528] border border-[#233d63] rounded-xl px-3 py-2 text-sm text-white focus:outline-none mb-3">
+            <option value="Cinematic & Inspiring" selected>Cinematic & Inspiring</option>
+            <option value="Fast-paced Viral Tech">Fast-paced Viral Tech</option>
+            <option value="Emotional & Nostalgic">Emotional & Nostalgic</option>
+            <option value="Bollywood Action Teaser">Bollywood Action Teaser</option>
+            <option value="Documentary & Grounded">Documentary & Grounded</option>
+          </select>
+
+          <label class="block text-xs font-semibold text-slate-300 mb-1">Voiceover Language</label>
+          <select id="videoLang" class="w-full bg-[#081528] border border-[#233d63] rounded-xl px-3 py-2 text-sm text-white focus:outline-none">
+            <option value="English (Indian Accent)" selected>English (Indian Accent)</option>
+            <option value="Hindi (Poetic & Punchy)">Hindi (Poetic & Punchy)</option>
+            <option value="Bengali (Rich & Eloquent)">Bengali (Rich & Eloquent)</option>
+            <option value="Hinglish (Casual & Contemporary)">Hinglish (Casual & Contemporary)</option>
+          </select>
+        </div>
+
+        <div class="flex flex-col justify-end">
+          <div class="p-3 bg-[#081528] border border-[#233d63] rounded-xl text-xs text-slate-400 mb-3 space-y-1">
+            <p class="font-semibold text-purple-300">Includes:</p>
+            <p>• Scene-by-scene timing</p>
+            <p>• Camera shot directions & lens choice</p>
+            <p>• Ready-to-copy AI Video generation prompts</p>
+          </div>
+          <button onclick="generateVideoScript()" id="genVideoBtn" class="w-full py-3 bg-purple-600 hover:bg-purple-500 font-bold text-sm text-white rounded-xl transition flex items-center justify-center gap-2 active:scale-95 shadow-lg shadow-purple-600/20">
+            <i class="fa-solid fa-clapperboard"></i> Generate Production Script
+          </button>
+        </div>
+      </div>
+
+      <!-- Script Output Display -->
+      <div class="bg-[#081528] border border-[#233d63] rounded-xl p-4 min-h-[300px]">
+        <div class="flex items-center justify-between pb-3 border-b border-[#233d63]/80">
+          <span class="text-xs font-bold text-purple-400 uppercase tracking-wider">Director's Production Draft</span>
+          <div class="flex items-center gap-2">
+            <button onclick="copyToClipboard(document.getElementById('videoScriptOutput').innerText)" class="px-2.5 py-1 bg-[#152b4a] hover:bg-[#203c66] text-xs text-slate-300 rounded border border-[#233d63] flex items-center gap-1 transition">
+              <i class="fa-regular fa-copy"></i> Copy Script
+            </button>
+            <button onclick="saveToHistory('Video Script', document.getElementById('videoScriptOutput').innerText)" class="px-2.5 py-1 bg-[#152b4a] hover:bg-[#203c66] text-xs text-amber-300 rounded border border-[#233d63] flex items-center gap-1 transition">
+              <i class="fa-regular fa-bookmark"></i> Save Script
+            </button>
+          </div>
+        </div>
+        <div id="videoScriptOutput" class="prose max-w-none text-slate-200 text-sm py-4 whitespace-pre-wrap leading-relaxed">
+Click "Generate Production Script" above to format a complete camera shot storyboard with AI prompts and voiceover cues.
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- SECTION 5: VOICE & SPEECH STUDIO           -->
+    <!-- ========================================== -->
+    <section id="tab-voice" class="panel-section hidden bg-[#0f223d] border border-[#233d63] rounded-2xl p-4 sm:p-6 shadow-xl space-y-5">
+      <div class="flex items-center justify-between pb-3 border-b border-[#233d63]">
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-lg bg-amber-500/20 text-amber-400 flex items-center justify-center text-lg">
+            <i class="fa-solid fa-microphone-lines"></i>
+          </div>
+          <div>
+            <h2 class="text-lg font-bold text-white">Voice & Audio Studio</h2>
+            <p class="text-xs text-slate-400">Speech-to-Text mic dictation and natural Text-to-Speech playback</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+        <!-- Text To Speech Tool -->
+        <div class="bg-[#081528] border border-[#233d63] rounded-xl p-4 space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-bold text-amber-400 uppercase tracking-wider flex items-center gap-1.5">
+              <i class="fa-solid fa-volume-high"></i> Text to Speech (TTS)
+            </span>
+          </div>
+          
+          <textarea id="ttsTextInput" rows="5" placeholder="Enter text in English, Hindi, or Bengali to read aloud..." class="w-full bg-[#0f223d] border border-[#233d63] rounded-lg p-3 text-sm text-white focus:outline-none resize-none leading-relaxed">Welcome to India AI by Akash. We are building the next generation of intelligent tools for creators, students, and businesses across India.</textarea>
+          
+          <div class="grid grid-cols-2 gap-3 text-xs">
+            <div>
+              <label class="block text-slate-400 mb-1">Select Voice</label>
+              <select id="ttsVoiceSelect" class="w-full bg-[#0f223d] border border-[#233d63] rounded-lg px-2 py-2 text-white text-xs focus:outline-none">
+                <option value="">Default Browser Voice</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-slate-400 mb-1">Speech Speed</label>
+              <input type="range" id="ttsRate" min="0.5" max="1.5" step="0.1" value="1" class="w-full accent-amber-500 mt-2">
+            </div>
+          </div>
+
+          <div class="flex items-center gap-2 pt-2">
+            <button onclick="playTTS(document.getElementById('ttsTextInput').value)" class="flex-1 py-2.5 bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold text-xs rounded-lg transition flex items-center justify-center gap-2">
+              <i class="fa-solid fa-play"></i> Read Aloud
+            </button>
+            <button onclick="pauseResumeTTS()" class="px-4 py-2.5 bg-[#152b4a] hover:bg-[#203c66] text-white text-xs font-semibold rounded-lg border border-[#233d63] transition">
+              <i class="fa-solid fa-pause"></i>
+            </button>
+            <button onclick="stopTTS()" class="px-4 py-2.5 bg-[#152b4a] hover:bg-red-500/20 text-red-400 text-xs font-semibold rounded-lg border border-[#233d63] transition">
+              <i class="fa-solid fa-stop"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Speech To Text (Dictation) -->
+        <div class="bg-[#081528] border border-[#233d63] rounded-xl p-4 space-y-3 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-xs font-bold text-emerald-400 uppercase tracking-wider flex items-center gap-1.5">
+                <i class="fa-solid fa-microphone"></i> Speech to Text Dictation
+              </span>
+              <span id="sttBadge" class="text-[10px] px-2 py-0.5 rounded-full bg-slate-800 text-slate-400">Idle</span>
+            </div>
+
+            <div class="flex gap-2 mb-2">
+              <select id="sttLangSelect" class="flex-1 bg-[#0f223d] border border-[#233d63] rounded-lg px-2 py-1.5 text-white text-xs focus:outline-none">
+                <option value="en-IN" selected>English (India)</option>
+                <option value="hi-IN">Hindi (हिंदी)</option>
+                <option value="bn-IN">Bengali (বাংলা)</option>
+                <option value="ta-IN">Tamil (தமிழ்)</option>
+                <option value="te-IN">Telugu (తెలుగు)</option>
+                <option value="mr-IN">Marathi (मराठी)</option>
+              </select>
+            </div>
+
+            <div id="sttResultBox" class="w-full bg-[#0f223d] border border-[#233d63] rounded-lg p-3 text-sm text-slate-200 min-h-[120px] max-h-[160px] overflow-y-auto whitespace-pre-wrap">
+Speech recognition transcription will appear here in real-time as you speak...
+            </div>
+          </div>
+
+          <div class="flex items-center gap-2 pt-2">
+            <button id="dictationMicBtn" onclick="toggleMainDictation()" class="flex-1 py-2.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs rounded-lg transition flex items-center justify-center gap-2">
+              <i class="fa-solid fa-microphone"></i> <span id="dictationBtnLabel">Start Microphone</span>
+            </button>
+            <button onclick="copyToClipboard(document.getElementById('sttResultBox').innerText)" class="px-3 py-2.5 bg-[#152b4a] hover:bg-[#203c66] text-white text-xs font-semibold rounded-lg border border-[#233d63]">
+              <i class="fa-regular fa-copy"></i>
+            </button>
+            <button onclick="sendDictationToChat()" title="Transfer to AI Chat" class="px-3 py-2.5 bg-[#FF9933] hover:bg-orange-500 text-slate-950 text-xs font-bold rounded-lg transition">
+              <i class="fa-solid fa-arrow-right"></i> To Chat
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- SECTION 6: WORKSPACE & HISTORY             -->
+    <!-- ========================================== -->
+    <section id="tab-history" class="panel-section hidden bg-[#0f223d] border border-[#233d63] rounded-2xl p-4 sm:p-6 shadow-xl space-y-5">
+      <div class="flex items-center justify-between pb-3 border-b border-[#233d63]">
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-lg bg-rose-500/20 text-rose-400 flex items-center justify-center text-lg">
+            <i class="fa-solid fa-box-archive"></i>
+          </div>
+          <div>
+            <h2 class="text-lg font-bold text-white">Local Workspace & Saved Records</h2>
+            <p class="text-xs text-slate-400">All prompts, generated notes, and creations securely preserved in your browser</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-2">
+          <button onclick="exportWorkspaceData()" class="px-3 py-1.5 rounded-lg bg-[#152b4a] hover:bg-[#203c66] border border-[#233d63] text-xs text-slate-300 transition flex items-center gap-1.5">
+            <i class="fa-solid fa-download"></i> Export JSON
+          </button>
+          <button onclick="clearHistoryConfirm()" class="px-3 py-1.5 rounded-lg bg-red-500/10 hover:bg-red-500/20 border border-red-500/30 text-xs text-red-400 transition flex items-center gap-1.5">
+            <i class="fa-regular fa-trash-can"></i> Clear All
+          </button>
+        </div>
+      </div>
+
+      <!-- Filter Categories -->
+      <div class="flex gap-2 border-b border-[#233d63]/60 pb-3 text-xs">
+        <button onclick="renderHistoryList('all')" class="hist-filter active px-3 py-1 rounded-full bg-[#FF9933] text-slate-950 font-bold">All Items</button>
+        <button onclick="renderHistoryList('Image')" class="hist-filter px-3 py-1 rounded-full bg-[#152b4a] text-slate-300">Images</button>
+        <button onclick="renderHistoryList('Translation')" class="hist-filter px-3 py-1 rounded-full bg-[#152b4a] text-slate-300">Translations</button>
+        <button onclick="renderHistoryList('Video Script')" class="hist-filter px-3 py-1 rounded-full bg-[#152b4a] text-slate-300">Video Scripts</button>
+      </div>
+
+      <!-- History Items Container -->
+      <div id="historyListContainer" class="space-y-3 max-h-[460px] overflow-y-auto pr-1">
+        <!-- Dynamically rendered items -->
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-[#0f223d]/80 border-t border-[#233d63] py-4 px-6 mt-12 text-center text-xs text-slate-400">
+    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
+      <div class="flex items-center gap-2 font-medium">
+        <span>Made with ❤️ for Bharat</span>
+        <span>•</span>
+        <span class="text-white">INDIA AI — by Akash</span>
+      </div>
+      <p class="text-[11px] text-slate-500">Fast • Multilingual • Browser Powered</p>
+    </div>
+  </footer>
+
+  <!-- ======================================================== -->
+  <!-- JAVASCRIPT APPLICATION CORE LOGIC                        -->
+  <!-- ======================================================== -->
+  <script>
+    // --- Application State ---
+    let chatConversation = [
+      { role: "model", parts: [{ text: "Namaste! I am INDIA AI. How can I assist you with your projects, code, or ideas today?" }] }
+    ];
+    let currentSpeechRecognition = null;
+    let isRecognizing = false;
+    let ttsUtterance = null;
+    let currentArtworkPrompt = "";
+    let currentArtUrl = "";
+
+    // Empty API key as per runtime instructions
+    const apiKey = "";
+
+    // --- Tab Switching Logic ---
+    function switchTab(tabId) {
+      document.querySelectorAll('.panel-section').forEach(el => el.classList.add('hidden'));
+      const activePanel = document.getElementById(`tab-${tabId}`);
+      if (activePanel) activePanel.classList.remove('hidden');
+
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.classList.remove('border-[#FF9933]', 'bg-[#152b4a]');
+        btn.classList.add('border-[#233d63]', 'bg-[#0f223d]');
+      });
+
+      const activeNav = document.getElementById(`nav-${tabId}`);
+      if (activeNav) {
+        activeNav.classList.remove('border-[#233d63]', 'bg-[#0f223d]');
+        activeNav.classList.add('border-[#FF9933]', 'bg-[#152b4a]');
+      }
+
+      if (tabId === 'history') {
+        renderHistoryList('all');
+      }
+    }
+
+    // --- Toast / Notification Helper ---
+    function showToast(msg, icon = 'fa-circle-check', isError = false) {
+      const toast = document.getElementById('toast');
+      const toastMsg = document.getElementById('toastMessage');
+      const toastIcon = document.getElementById('toastIcon');
+
+      toastMsg.innerText = msg;
+      toastIcon.innerHTML = `<i class="fa-solid ${icon} ${isError ? 'text-red-400' : 'text-[#FF9933]'}"></i>`;
+
+      toast.classList.remove('hidden');
+      setTimeout(() => {
+        toast.classList.add('hidden');
+      }, 3500);
+    }
+
+    // --- Copy To Clipboard Helper ---
+    function copyToClipboard(text) {
+      if (!text || text.trim() === '') {
+        showToast('Nothing to copy', 'fa-circle-exclamation', true);
+        return;
+      }
+      const textArea = document.createElement("textarea");
+      textArea.value = text;
+      textArea.style.position = "fixed";
+      textArea.style.left = "-999999px";
+      document.body.appendChild(textArea);
+      textArea.focus();
+      textArea.select();
+      try {
+        document.execCommand('copy');
+        showToast('Copied to clipboard!');
+      } catch (err) {
+        showToast('Failed to copy', 'fa-circle-xmark', true);
+      }
+      document.body.removeChild(textArea);
+    }
+
+    // --- Exponential Backoff Fetch Helper for Gemini API ---
+    async function fetchWithRetry(url, options, maxRetries = 3) {
+      let delay = 1000;
+      for (let i = 0; i < maxRetries; i++) {
+        try {
+          const response = await fetch(url, options);
+          if (response.ok) return response;
+          if (response.status === 429 && i < maxRetries - 1) {
+            await new Promise(r => setTimeout(r, delay));
+            delay *= 2;
+            continue;
+          }
+          return response;
+        } catch (e) {
+          if (i === maxRetries - 1) throw e;
+          await new Promise(r => setTimeout(r, delay));
+          delay *= 2;
+        }
+      }
+    }
+
+    // ==========================================
+    // 1. AI CHAT CORE
+    // ==========================================
+    function applyPrompt(text) {
+      document.getElementById('chatInput').value = text;
+      document.getElementById('chatInput').focus();
+    }
+
+    function handleChatEnter(e) {
+      if (e.key === 'Enter' && !e.shiftKey) {
+        e.preventDefault();
+        sendChatMessage();
+      }
+    }
+
+    async function sendChatMessage() {
+      const inputEl = document.getElementById('chatInput');
+      const message = inputEl.value.trim();
+      if (!message) return;
+
+      inputEl.value = '';
+      appendChatMessage('user', message);
+
+      // Append user turn to memory
+      chatConversation.push({
+        role: "user",
+        parts: [{ text: message }]
+      });
+
+      // Show typing indicator
+      const typingId = appendTypingIndicator();
+
+      const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent?key=${apiKey}`;
+      const payload = {
+        contents: chatConversation,
+        systemInstruction: {
+          parts: [{
+            text: "You are INDIA AI, a smart, polite, multilingual AI assistant created by Akash for India. You provide clear, well-structured, inspiring answers in English, Hindi, Bengali, Tamil, and other Indian languages when asked. Format technical answers with code blocks, markdown lists, and bold headings."
+          }]
+        }
+      };
+
+      try {
+        const response = await fetchWithRetry(apiUrl, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+
+        removeTypingIndicator(typingId);
+
+        if (!response.ok) {
+          throw new Error(`API error: ${response.status}`);
+        }
+
+        const data = await response.json();
+        const candidateText = data.candidates?.[0]?.content?.parts?.[0]?.text;
+
+        if (candidateText) {
+          appendChatMessage('model', candidateText);
+          chatConversation.push({
+            role: "model",
+            parts: [{ text: candidateText }]
+          });
+          // Cache to local storage
+          localStorage.setItem('india_ai_chat_history', JSON.stringify(chatConversation));
+        } else {
+          appendChatMessage('model', "I received an empty response. Please try rephrasing your query.");
+        }
+      } catch (error) {
+        removeTypingIndicator(typingId);
+        appendChatMessage('model', "Sorry, I had trouble reaching the AI service right now. Please verify your connection or retry in a moment.");
+      }
+    }
+
+    function appendChatMessage(role, content) {
+      const thread = document.getElementById('chatThread');
+      const div = document.createElement('div');
+      div.className = "flex items-start gap-3";
+
+      const isUser = role === 'user';
+      const parsedText = marked.parse(content);
+
+      div.innerHTML = `
+        <div class="w-8 h-8 rounded-lg ${isUser ? 'bg-blue-600 text-white' : 'bg-orange-500/20 text-[#FF9933]'} flex items-center justify-center font-bold text-xs shrink-0">
+          ${isUser ? 'YOU' : 'AI'}
+        </div>
+        <div class="${isUser ? 'bg-[#152b4a] border-blue-500/40' : 'bg-[#102038] border-[#233d63]'} border rounded-2xl ${isUser ? 'rounded-tr-none' : 'rounded-tl-none'} p-4 max-w-[85%] text-sm text-slate-200">
+          <div class="prose max-w-none text-slate-100">${parsedText}</div>
+          <div class="flex items-center justify-end gap-2 mt-2 pt-2 border-t border-[#233d63]/50 text-[11px] text-slate-400">
+            <button onclick="playTTS(this.closest('.flex-start, .flex').querySelector('.prose').innerText)" class="hover:text-amber-400" title="Listen">
+              <i class="fa-solid fa-volume-high"></i>
+            </button>
+            <button onclick="copyToClipboard(this.closest('.flex-start, .flex').querySelector('.prose').innerText)" class="hover:text-blue-400" title="Copy">
+              <i class="fa-regular fa-copy"></i>
+            </button>
+          </div>
+        </div>
+      `;
+
+      thread.appendChild(div);
+      thread.scrollTop = thread.scrollHeight;
+      Prism.highlightAllUnder(div);
+    }
+
+    function appendTypingIndicator() {
+      const thread = document.getElementById('chatThread');
+      const id = 'typing-' + Date.now();
+      const div = document.createElement('div');
+      div.id = id;
+      div.className = "flex items-start gap-3";
+      div.innerHTML = `
+        <div class="w-8 h-8 rounded-lg bg-orange-500/20 text-[#FF9933] flex items-center justify-center font-bold text-xs shrink-0">
+          AI
+        </div>
+        <div class="bg-[#102038] border border-[#233d63] rounded-2xl rounded-tl-none px-4 py-3 text-sm text-slate-400 flex items-center gap-1.5">
+          <span class="w-2 h-2 rounded-full bg-[#FF9933] animate-bounce"></span>
+          <span class="w-2 h-2 rounded-full bg-white animate-bounce [animation-delay:0.2s]"></span>
+          <span class="w-2 h-2 rounded-full bg-[#138808] animate-bounce [animation-delay:0.4s]"></span>
+        </div>
+      `;
+      thread.appendChild(div);
+      thread.scrollTop = thread.scrollHeight;
+      return id;
+    }
+
+    function removeTypingIndicator(id) {
+      const el = document.getElementById(id);
+      if (el) el.remove();
+    }
+
+    function clearChatConfirm() {
+      chatConversation = [
+        { role: "model", parts: [{ text: "Namaste! I am INDIA AI. How can I assist you with your projects, code, or ideas today?" }] }
+      ];
+      localStorage.removeItem('india_ai_chat_history');
+      const thread = document.getElementById('chatThread');
+      thread.innerHTML = `
+        <div class="flex items-start gap-3">
+          <div class="w-8 h-8 rounded-lg bg-orange-500/20 text-[#FF9933] flex items-center justify-center font-bold text-xs shrink-0">
+            AI
+          </div>
+          <div class="bg-[#152b4a] border border-[#233d63] rounded-2xl rounded-tl-none p-4 max-w-[85%] text-sm">
+            <p class="font-semibold text-white mb-1">Namaste! Chat reset 🙏</p>
+            <p class="text-slate-300">Start fresh. Ask any query in your preferred language!</p>
+          </div>
+        </div>
+      `;
+      showToast('Chat history cleared');
+    }
+
+    // ==========================================
+    // 2. INDIC TRANSLATION ENGINE
+    // ==========================================
+    function swapLanguages() {
+      const src = document.getElementById('transSource');
+      const tgt = document.getElementById('transTarget');
+      if (src.value === 'Auto-Detect') return;
+      const tmp = src.value;
+      src.value = tgt.value;
+      tgt.value = tmp;
+    }
+
+    async function executeTranslation() {
+      const text = document.getElementById('transInput').value.trim();
+      const src = document.getElementById('transSource').value;
+      const tgt = document.getElementById('transTarget').value;
+      const outEl = document.getElementById('transOutput');
+      const statusEl = document.getElementById('transStatus');
+      const btn = document.getElementById('transSubmitBtn');
+
+      if (!text) {
+        showToast('Please enter text to translate', 'fa-circle-exclamation', true);
+        return;
+      }
+
+      btn.disabled = true;
+      btn.innerHTML = `<i class="fa-solid fa-spinner animate-spin"></i> Translating...`;
+      statusEl.innerText = "Translating...";
+
+      const prompt = `Translate the following text accurately from ${src} to ${tgt}. Maintain proper cultural nuance, idioms, and natural grammar. Return ONLY the translated text without extra explanation:\n\n"${text}"`;
+
+      const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent?key=${apiKey}`;
+      const payload = {
+        contents: [{ parts: [{ text: prompt }] }]
+      };
+
+      try {
+        const response = await fetchWithRetry(apiUrl, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+
+        const data = await response.json();
+        const translated = data.candidates?.[0]?.content?.parts?.[0]?.text?.trim();
+
+        if (translated) {
+          outEl.innerText = translated;
+          statusEl.innerText = "Complete";
+          showToast(`Translated to ${tgt}!`);
+        } else {
+          outEl.innerText = "Translation could not be completed. Try shorter text.";
+          statusEl.innerText = "Error";
+        }
+      } catch (err) {
+        outEl.innerText = "Network issue or translation service temporarily unavailable.";
+        statusEl.innerText = "Failed";
+      } finally {
+        btn.disabled = false;
+        btn.innerHTML = `<i class="fa-solid fa-bolt"></i> Translate Now`;
+      }
+    }
+
+    // Update input char count
+    document.getElementById('transInput').addEventListener('input', function() {
+      document.getElementById('transCharCount').innerText = `${this.value.length} characters`;
+    });
+
+    // ==========================================
+    // 3. AI IMAGE STUDIO (Live High-Def Generative)
+    // ==========================================
+    function setImageStyle(style) {
+      const promptInput = document.getElementById('imagePrompt');
+      promptInput.value = promptInput.value.replace(/\[Style:.*?\]/g, '').trim() + `, [Style: ${style}]`;
+      showToast('Style appended to prompt');
+    }
+
+    async function enhancePromptWithAI() {
+      const promptInput = document.getElementById('imagePrompt');
+      const basePrompt = promptInput.value.trim();
+      const btn = document.getElementById('enhancePromptBtn');
+
+      if (!basePrompt) {
+        showToast('Enter a basic description first', 'fa-circle-exclamation', true);
+        return;
+      }
+
+      btn.disabled = true;
+      btn.innerHTML = `<i class="fa-solid fa-spinner animate-spin"></i> Enhancing...`;
+
+      const prompt = `Act as an expert digital artist prompt engineer. Expand this simple image concept into a vivid, descriptive, high-resolution generative image prompt suitable for photorealistic and cinematic rendering: "${basePrompt}". Provide ONLY the enhanced prompt string (under 50 words), no preamble.`;
+
+      const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent?key=${apiKey}`;
+      try {
+        const response = await fetchWithRetry(apiUrl, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }] })
+        });
+        const data = await response.json();
+        const enhanced = data.candidates?.[0]?.content?.parts?.[0]?.text?.trim();
+        if (enhanced) {
+          promptInput.value = enhanced.replace(/^"|"$/g, '');
+          showToast('Prompt enhanced with AI!');
+        }
+      } catch (e) {
+        showToast('Could not enhance prompt', 'fa-circle-xmark', true);
+      } finally {
+        btn.disabled = false;
+        btn.innerHTML = `<i class="fa-solid fa-wand-magic"></i> AI Enhance`;
+      }
+    }
+
+    async function generateImage() {
+      const prompt = document.getElementById('imagePrompt').value.trim();
+      const aspect = document.getElementById('imageAspect').value;
+      const loader = document.getElementById('imageLoader');
+      const displayWrapper = document.getElementById('imageDisplayWrapper');
+      const imgEl = document.getElementById('generatedImg');
+      const detailsEl = document.getElementById('imgDetails');
+      const btn = document.getElementById('genImgBtn');
+
+      if (!prompt) {
+        showToast('Please describe your image', 'fa-circle-exclamation', true);
+        return;
+      }
+
+      btn.disabled = true;
+      loader.classList.remove('hidden');
+      imgEl.classList.add('opacity-30');
+
+      let width = 800;
+      let height = 600;
+      if (aspect === '1:1') { width = 768; height = 768; }
+      else if (aspect === '9:16') { width = 576; height = 1024; }
+      else if (aspect === '4:3') { width = 800; height = 600; }
+      else { width = 1024; height = 576; }
+
+      const seed = Math.floor(Math.random() * 9999999);
+      const encodedPrompt = encodeURIComponent(prompt);
+      const imageUrl = `https://image.pollinations.ai/prompt/${encodedPrompt}?width=${width}&height=${height}&seed=${seed}&nologo=true&enhance=true`;
+
+      // Pre-load image
+      const newImg = new Image();
+      newImg.onload = function() {
+        imgEl.src = imageUrl;
+        currentArtUrl = imageUrl;
+        currentArtworkPrompt = prompt;
+        imgEl.classList.remove('opacity-30');
+        loader.classList.add('hidden');
+        btn.disabled = false;
+        detailsEl.innerText = `${prompt.substring(0, 45)}... • ${aspect}`;
+        showToast('Image generated successfully!');
+      };
+      newImg.onerror = function() {
+        imgEl.classList.remove('opacity-30');
+        loader.classList.add('hidden');
+        btn.disabled = false;
+        showToast('Image generation server busy. Please retry.', 'fa-circle-xmark', true);
+      };
+      newImg.src = imageUrl;
+    }
+
+    function downloadImage() {
+      const img = document.getElementById('generatedImg');
+      if (!img.src) return;
+      const a = document.createElement('a');
+      a.href = img.src;
+      a.target = '_blank';
+      a.download = `IndiaAI_${Date.now()}.jpg`;
+      a.click();
+      showToast('Opening high-res image...');
+    }
+
+    function saveCurrentArtwork() {
+      if (!currentArtUrl) {
+        currentArtUrl = document.getElementById('generatedImg').src;
+        currentArtworkPrompt = document.getElementById('imagePrompt').value;
+      }
+      saveToHistory('Image', currentArtworkPrompt, currentArtUrl);
+    }
+
+    // ==========================================
+    // 4. VIDEO SCRIPT & STORYBOARD STUDIO
+    // ==========================================
+    async function generateVideoScript() {
+      const topic = document.getElementById('videoTopic').value.trim();
+      const tone = document.getElementById('videoTone').value;
+      const lang = document.getElementById('videoLang').value;
+      const out = document.getElementById('videoScriptOutput');
+      const btn = document.getElementById('genVideoBtn');
+
+      if (!topic) {
+        showToast('Please provide a concept or topic', 'fa-circle-exclamation', true);
+        return;
+      }
+
+      btn.disabled = true;
+      btn.innerHTML = `<i class="fa-solid fa-spinner animate-spin"></i> Directing Script...`;
+      out.innerText = "Generating cinematic scenes, shot composition, and voiceover...";
+
+      const prompt = `You are an award-winning Indian film director and creative advertising executive.
+Create a detailed 4-to-5 scene production storyboard and script for:
+Concept: "${topic}"
+Tone: ${tone}
+Voiceover Language: ${lang}
+
+Format each scene clearly with:
+1. Scene [X] - [Timecode, e.g. 0:00 - 0:08]
+2. Visual & Camera Movement (Camera angles, drone/dolly, color grading)
+3. Voiceover (VO) Script in ${lang}
+4. AI Video Tool Generation Prompt (Ready for Runway/Sora/Pika)
+5. Audio / Music Cues`;
+
+      const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent?key=${apiKey}`;
+
+      try {
+        const response = await fetchWithRetry(apiUrl, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }] })
+        });
+        const data = await response.json();
+        const script = data.candidates?.[0]?.content?.parts?.[0]?.text;
+        if (script) {
+          out.innerHTML = marked.parse(script);
+          showToast('Storyboard generated!');
+        } else {
+          out.innerText = "Could not generate storyboard. Please retry.";
+        }
+      } catch (e) {
+        out.innerText = "Error generating production script. Check internet connectivity.";
+      } finally {
+        btn.disabled = false;
+        btn.innerHTML = `<i class="fa-solid fa-clapperboard"></i> Generate Production Script`;
+      }
+    }
+
+    // ==========================================
+    // 5. VOICE STUDIO (STT & TTS)
+    // ==========================================
+    function populateVoices() {
+      if (!('speechSynthesis' in window)) return;
+      const voices = window.speechSynthesis.getVoices();
+      const select = document.getElementById('ttsVoiceSelect');
+      select.innerHTML = '<option value="">Default Voice</option>';
+
+      voices.forEach((v, i) => {
+        const opt = document.createElement('option');
+        opt.value = i;
+        opt.innerText = `${v.name} (${v.lang}) ${v.lang.includes('IN') ? '🇮🇳' : ''}`;
+        select.appendChild(opt);
+      });
+    }
+
+    if ('speechSynthesis' in window) {
+      window.speechSynthesis.onvoiceschanged = populateVoices;
+      populateVoices();
+    }
+
+    function playTTS(text) {
+      if (!text || text.trim() === '') {
+        showToast('No text available to read', 'fa-circle-exclamation', true);
+        return;
+      }
+      if (!('speechSynthesis' in window)) {
+        showToast('TTS not supported in this browser', 'fa-circle-xmark', true);
+        return;
+      }
+
+      window.speechSynthesis.cancel();
+      ttsUtterance = new SpeechSynthesisUtterance(text);
+
+      const voiceIndex = document.getElementById('ttsVoiceSelect').value;
+      const rate = parseFloat(document.getElementById('ttsRate').value) || 1;
+      const voices = window.speechSynthesis.getVoices();
+
+      if (voiceIndex !== "" && voices[voiceIndex]) {
+        ttsUtterance.voice = voices[voiceIndex];
+      }
+      ttsUtterance.rate = rate;
+
+      ttsUtterance.onstart = () => showToast('Playing audio...', 'fa-volume-high');
+      ttsUtterance.onerror = () => showToast('Audio playback stopped', 'fa-circle-exclamation', true);
+
+      window.speechSynthesis.speak(ttsUtterance);
+    }
+
+    function pauseResumeTTS() {
+      if (!('speechSynthesis' in window)) return;
+      if (window.speechSynthesis.speaking) {
+        if (window.speechSynthesis.paused) {
+          window.speechSynthesis.resume();
+          showToast('Resumed audio');
+        } else {
+          window.speechSynthesis.pause();
+          showToast('Paused audio');
+        }
+      }
+    }
+
+    function stopTTS() {
+      if (!('speechSynthesis' in window)) return;
+      window.speechSynthesis.cancel();
+      showToast('Audio stopped');
+    }
+
+    // Dictation (Speech To Text) with Web Speech API
+    function toggleSpeechToText(targetInputId, micButtonId) {
+      const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+      if (!SpeechRecognition) {
+        showToast('Microphone dictation not supported in this browser', 'fa-circle-xmark', true);
+        return;
+      }
+
+      const micBtn = document.getElementById(micButtonId);
+
+      if (isRecognizing && currentSpeechRecognition) {
+        currentSpeechRecognition.stop();
+        isRecognizing = false;
+        micBtn.classList.remove('text-red-500', 'animate-pulse');
+        showToast('Dictation ended');
+        return;
+      }
+
+      const recognition = new SpeechRecognition();
+      recognition.continuous = false;
+      recognition.interimResults = false;
+      recognition.lang = 'en-IN'; // Default Indian accent
+
+      recognition.onstart = function() {
+        isRecognizing = true;
+        currentSpeechRecognition = recognition;
+        micBtn.classList.add('text-red-500', 'animate-pulse');
+        showToast('Listening... Speak now', 'fa-microphone');
+      };
+
+      recognition.onresult = function(event) {
+        const transcript = event.results[0][0].transcript;
+        const target = document.getElementById(targetInputId);
+        target.value = (target.value ? target.value + ' ' : '') + transcript;
+        showToast('Voice captured!');
+      };
+
+      recognition.onerror = function() {
+        showToast('Mic access error or silent', 'fa-circle-xmark', true);
+        micBtn.classList.remove('text-red-500', 'animate-pulse');
+        isRecognizing = false;
+      };
+
+      recognition.onend = function() {
+        micBtn.classList.remove('text-red-500', 'animate-pulse');
+        isRecognizing = false;
+      };
+
+      recognition.start();
+    }
+
+    function toggleMainDictation() {
+      const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+      if (!SpeechRecognition) {
+        showToast('Web Speech recognition not supported', 'fa-circle-xmark', true);
+        return;
+      }
+
+      const badge = document.getElementById('sttBadge');
+      const btnLabel = document.getElementById('dictationBtnLabel');
+      const resultBox = document.getElementById('sttResultBox');
+      const lang = document.getElementById('sttLangSelect').value;
+
+      if (isRecognizing && currentSpeechRecognition) {
+        currentSpeechRecognition.stop();
+        isRecognizing = false;
+        badge.innerText = 'Idle';
+        badge.className = 'text-[10px] px-2 py-0.5 rounded-full bg-slate-800 text-slate-400';
+        btnLabel.innerText = 'Start Microphone';
+        return;
+      }
+
+      const recognition = new SpeechRecognition();
+      recognition.continuous = true;
+      recognition.interimResults = true;
+      recognition.lang = lang;
+
+      recognition.onstart = function() {
+        isRecognizing = true;
+        currentSpeechRecognition = recognition;
+        badge.innerText = 'Listening...';
+        badge.className = 'text-[10px] px-2 py-0.5 rounded-full bg-red-950 text-red-400 border border-red-500 animate-pulse';
+        btnLabel.innerText = 'Stop Microphone';
+        showToast('Recording voice...');
+      };
+
+      recognition.onresult = function(event) {
+        let finalTrans = '';
+        for (let i = event.resultIndex; i < event.results.length; ++i) {
+          if (event.results[i].isFinal) {
+            finalTrans += event.results[i][0].transcript + ' ';
+          }
+        }
+        if (finalTrans) {
+          if (resultBox.innerText.includes('transcription will appear')) {
+            resultBox.innerText = finalTrans;
+          } else {
+            resultBox.innerText += ' ' + finalTrans;
+          }
+        }
+      };
+
+      recognition.onerror = function() {
+        badge.innerText = 'Error';
+        btnLabel.innerText = 'Start Microphone';
+        isRecognizing = false;
+      };
+
+      recognition.onend = function() {
+        badge.innerText = 'Idle';
+        badge.className = 'text-[10px] px-2 py-0.5 rounded-full bg-slate-800 text-slate-400';
+        btnLabel.innerText = 'Start Microphone';
+        isRecognizing = false;
+      };
+
+      recognition.start();
+    }
+
+    function sendDictationToChat() {
+      const text = document.getElementById('sttResultBox').innerText;
+      if (!text || text.includes('transcription will appear')) {
+        showToast('No speech dictation to transfer', 'fa-circle-exclamation', true);
+        return;
+      }
+      switchTab('chat');
+      document.getElementById('chatInput').value = text;
+      showToast('Transferred to AI Chat!');
+    }
+
+    // ==========================================
+    // 6. WORKSPACE & PERSISTENCE
+    // ==========================================
+    function saveToHistory(type, content, extraMediaUrl = null) {
+      if (!content || content.trim() === '') {
+        showToast('Content is empty', 'fa-circle-exclamation', true);
+        return;
+      }
+
+      const history = JSON.parse(localStorage.getItem('india_ai_workspace') || '[]');
+      const item = {
+        id: 'item_' + Date.now(),
+        type: type,
+        content: content,
+        mediaUrl: extraMediaUrl,
+        date: new Date().toLocaleString('en-IN', { dateStyle: 'medium', timeStyle: 'short' })
+      };
+
+      history.unshift(item);
+      localStorage.setItem('india_ai_workspace', JSON.stringify(history));
+      showToast(`Saved to Workspace (${type})!`);
+    }
+
+    function renderHistoryList(filter = 'all') {
+      const container = document.getElementById('historyListContainer');
+      const history = JSON.parse(localStorage.getItem('india_ai_workspace') || '[]');
+
+      document.querySelectorAll('.hist-filter').forEach(f => {
+        if (f.innerText.toLowerCase().includes(filter.toLowerCase()) || (filter === 'all' && f.innerText.includes('All'))) {
+          f.className = 'hist-filter active px-3 py-1 rounded-full bg-[#FF9933] text-slate-950 font-bold';
+        } else {
+          f.className = 'hist-filter px-3 py-1 rounded-full bg-[#152b4a] text-slate-300';
+        }
+      });
+
+      const filtered = filter === 'all' ? history : history.filter(item => item.type.toLowerCase().includes(filter.toLowerCase()));
+
+      if (filtered.length === 0) {
+        container.innerHTML = `
+          <div class="text-center py-12 text-slate-500 space-y-2">
+            <i class="fa-solid fa-folder-open text-3xl opacity-40"></i>
+            <p class="text-sm">No saved creations under this category.</p>
+          </div>
+        `;
+        return;
+      }
+
+      container.innerHTML = filtered.map(item => `
+        <div class="p-4 rounded-xl bg-[#081528] border border-[#233d63] hover:border-slate-500 transition flex flex-col md:flex-row gap-3 justify-between items-start">
+          <div class="space-y-1.5 flex-1">
+            <div class="flex items-center gap-2">
+              <span class="text-[10px] font-bold px-2 py-0.5 rounded-full ${
+                item.type === 'Image' ? 'bg-emerald-950 text-emerald-400 border border-emerald-500/30' :
+                item.type === 'Translation' ? 'bg-blue-950 text-blue-400 border border-blue-500/30' :
+                'bg-purple-950 text-purple-400 border border-purple-500/30'
+              }">${item.type}</span>
+              <span class="text-[11px] text-slate-500">${item.date}</span>
+            </div>
+            <p class="text-xs text-slate-200 line-clamp-3 whitespace-pre-wrap">${item.content}</p>
+            ${item.mediaUrl ? `<img src="${item.mediaUrl}" class="w-28 h-20 object-cover rounded-lg border border-[#233d63] mt-2">` : ''}
+          </div>
+          <div class="flex items-center gap-2 shrink-0">
+            <button onclick="copyToClipboard('${encodeURIComponent(item.content)}'.replace(/%20/g, ' '))" class="p-2 text-slate-400 hover:text-blue-400 rounded-lg hover:bg-[#152b4a] text-xs" title="Copy">
+              <i class="fa-regular fa-copy"></i>
+            </button>
+            <button onclick="deleteHistoryItem('${item.id}')" class="p-2 text-slate-400 hover:text-red-400 rounded-lg hover:bg-red-500/10 text-xs" title="Delete">
+              <i class="fa-regular fa-trash-can"></i>
+            </button>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function deleteHistoryItem(id) {
+      let history = JSON.parse(localStorage.getItem('india_ai_workspace') || '[]');
+      history = history.filter(item => item.id !== id);
+      localStorage.setItem('india_ai_workspace', JSON.stringify(history));
+      renderHistoryList('all');
+      showToast('Item deleted');
+    }
+
+    function clearHistoryConfirm() {
+      localStorage.removeItem('india_ai_workspace');
+      renderHistoryList('all');
+      showToast('All saved items cleared');
+    }
+
+    function exportWorkspaceData() {
+      const history = localStorage.getItem('india_ai_workspace') || '[]';
+      const blob = new Blob([history], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `IndiaAI_Workspace_Export_${Date.now()}.json`;
+      a.click();
+      URL.revokeObjectURL(url);
+      showToast('Workspace exported as JSON');
+    }
+
+    // --- On Window Load Initialization ---
+    window.onload = function() {
+      // Load cached chat if available
+      const savedChat = localStorage.getItem('india_ai_chat_history');
+      if (savedChat) {
+        try {
+          const parsed = JSON.parse(savedChat);
+          if (Array.isArray(parsed) && parsed.length > 1) {
+            chatConversation = parsed;
+            const thread = document.getElementById('chatThread');
+            thread.innerHTML = '';
+            parsed.forEach(turn => {
+              if (turn.parts?.[0]?.text) {
+                appendChatMessage(turn.role, turn.parts[0].text);
+              }
+            });
+          }
+        } catch (e) {}
+      }
+
+      // Check URL parameters for immediate tab routing (e.g., #images)
+      const hash = window.location.hash.replace('#', '');
+      if (['chat', 'translate', 'images', 'video', 'voice', 'history'].includes(hash)) {
+        switchTab(hash);
+      } else {
+        switchTab('chat');
+      }
+    };
+  </script>
+</body>
+</html>
